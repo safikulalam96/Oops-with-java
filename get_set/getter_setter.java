@@ -15,8 +15,8 @@ class A{
         return rollno;
         
     }
-    public void set(String collegename){
-        this.collegename=collegename;
+    public void set(int rollno){
+        this.rollno=rollno;
     }
 
     public String get2(){

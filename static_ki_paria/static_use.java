@@ -11,13 +11,13 @@ class Mobile{
 
 
 
-    Mobile(int price,String brand,String Model){
+    public Mobile(int price,String brand,String Model){
         this.price=price;
         this.brand=brand;
         this.Model=Model;
     }
     void display(){
-        System.out.println("price: "+ price+ " Brand name: "+ 
+        System.out.print("price: "+ price+ " Brand name: "+ 
         brand+ "Model name: "+ Model+ " Ownership name: "+ ownername);
     }
 
@@ -26,7 +26,7 @@ class Mobile{
 public class static_use {
     public static void main(String[] args) {
         Mobile obj2=new Mobile(99, "chinaphunn", "choda");
-        Mobile obj=new Mobile(60,"I-phunn","iphone 14");
+        Mobile obj=new Mobile(160,"I-phunn","iphone 14");
        obj.display();
        obj2.display();
     }

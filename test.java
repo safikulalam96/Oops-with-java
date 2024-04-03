@@ -1,24 +1,19 @@
-abstract class Vehicle {
-    abstract void start();
-}
-
-class Car extends Vehicle {
-    void start() {
-        System.out.println("Car ki 4 wheels hota hai");
-    }
-}
-
-class Bike extends Vehicle {
-    void start() {
-        System.out.println("Bike ki 2 wheels hota hai");
-    }
-}
+import java.util.Scanner;
 
 public class test{
     public static void main(String[] args) {
-        Car obj1 = new Car();
-        Bike obj2 = new Bike();
-        obj1.start();
-        obj2.start();
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the limit: ");
+        int n = sc.nextInt();
+        
+        int n1=0,n2=1,n3;
+        System.out.print(n1 + " " + n2);
+
+        for (int i = 2; i < n; i++) {
+            n3=n1+ n2;
+            System.out.print(" "+ n3);
+            n1=n2;
+            n2=n3;
+        }
     }
 }

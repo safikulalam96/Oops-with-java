@@ -1,6 +1,5 @@
 abstract class shape{
-    void numberofsides(){
-    }
+    abstract void numberofsides();
 }
 class rectangle extends shape{
     void numberofsides(){

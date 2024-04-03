@@ -1,7 +1,7 @@
 package abstraction;
 
 abstract class Vehicle{
-    int no_of_tyres;
+    // int no_of_tyres;
    abstract void start();
 }
 

@@ -1,49 +1,66 @@
-class School_Population{
-    int age;
+class Employee{
     String name;
-    void display(){
-        // this.age=age;
-        // this.name=name;
-        System.out.println(this.age);
-        System.out.println(this.name);
+    int age;
+    long phone;
+    String address;
+    int salary;
+
+    
+    public Employee(String name,int age,long phone,String address,int salary){
+        this.name=name;
+        this.age=age;
+        this.phone=phone;
+        this.address=address;
+        this.salary=salary;
+    }
+    void printsalary(){
+        System.out.print("salary: " + salary);
+    }
+}
+class Officer extends Employee{
+    String specialization;
+    public Officer(String name, int age, int phone, String address, int salary,String special) {
+        super(name,age,phone,address,salary);
+        this.specialization=special;
     }
 
-}
-class Student extends School_Population{
-    int rollno;
-    String class_enrolled;
-
-    void display() {
-        // this.rollno =rollno;
-        // this.class_enrolled = class_enrolled;
-        System.out.println(this.age);
-        System.out.println(this.name);
-        System.out.println(this.rollno);
-        System.out.println(this.class_enrolled);
-    }
-
-}
-class Employee extends School_Population{
    
-
 }
-class Staff extends Employee{
-    int employee_id;
-    int date;
-    void display(){
-        System.out.println(this.employee_id);
-        System.out.println(this.date);
-         System.out.println(this.age);
-        System.out.println(this.name);
+class Manager extends Employee{
+    String department;
+   public Manager(String name, int age, int phone, String address, int salary,String app){
+    super(name,age,phone,address,salary);
+    this.department=app;
     }
-}
-class Teacher extends Employee{
-
 }
 
 public class employees {
     public static void main(String[] args) {
+        Officer off = new Officer("shamim",29,98003,"simhat",20000,"IT");
+        // off.printsalary();
+        Manager man= new Manager("faiz",20,963258,"haringhata",26530,"bca");
+        // man.printsalary();
+
+
+
+        System.out.println("Officer Details:");
+        System.out.println("Name: " + off.name);
+        System.out.println("Age: " + off.age);
+        System.out.println("Phone Number: " + off.phone);
+        System.out.println("Address: " + off.address);
+        System.out.println("Specialization: " + off.specialization);
+        off.printsalary();
         
+        System.out.println();
+
+        // Printing details of Manager
+        System.out.println("Manager Details:");
+        System.out.println("Name: " + man.name);
+        System.out.println("Age: " + man.age);
+        System.out.println("Phone Number: " + man.phone);
+        System.out.println("Address: " + man.address);
+        System.out.println("Department: " + man.department);
+        man.printsalary();
     }
     
 }

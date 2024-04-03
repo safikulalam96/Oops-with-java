@@ -17,16 +17,13 @@ class Car3 extends Car{
     void name(){
         System.out.println("Tempuu");
     }
-
-
-   
 }
 
 public class method_overriding {
     public static void main(String[] args) {
 
         Car2 naam= new Car2();
-        Car naam2= new Car3();
+        Car3 naam2= new Car3();
         // int r1= naam name();
         // System.out.println(r1);
         naam.name();

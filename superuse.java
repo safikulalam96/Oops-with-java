@@ -19,8 +19,7 @@ class B extends A{
 }
 public class superuse{
     public static void main(String[] args){
-
-    new B(5);
+    B b =new B(5);
     }
     
 }

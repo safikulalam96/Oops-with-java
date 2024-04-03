@@ -1,55 +1,31 @@
-class Employee{
-    String name;
-    int phone;
-    String address;
-    int salary;
-    
-    void show_salary(){
-        System.out.println(this.salary);
-    }
-
-    // public Employee(String name, int phone, String address, int salary) {
-    //     this.name = name;
-    //     this.phone = phone;
-    //     this.address = address;
-    //     this.salary = salary;
-    // }
-    
-}
-class Officer extends Employee{
-    String specilization;
-    // public Officer(string specilization){
-    //     super(String name,int phone,String address,int salary);
-    //     this.specilization=specilization;
-    // }
-    void display(){
-        System.out.println(this.specilization);
-        //    System.out.println(this.department);
-        System.out.println(this.name);
-        System.out.println(this.address);
-        System.out.println(this.phone);
-
+abstract class shape{
+    void numberofsides(){
     }
 }
-class Manager extends Employee{
-    String department;
-     void display(){
-        System.out.println(this.department);
-        System.out.println(this.name);
-        System.out.println(this.address);
-        System.out.println(this.phone);
-
+class rectangle extends shape{
+    void numberofsides(){
+        System.out.println("I have 4 sides");
+    }
+}
+class triangle extends shape{
+    void numberofsides(){
+        System.out.println("I have 3 sides");
+    }
+}
+class hexagon extends shape{
+    void numberofsides(){
+        System.out.println("I have 6 sides");
     }
 }
 
-public class sample {
+public class sample{
     public static void main(String[] args) {
-        Officer officier =new Officer();
-        Manager manager= new Manager();
+        rectangle rec = new rectangle();
+        rec.numberofsides();
+        triangle tri = new triangle();
+        tri.numberofsides();
+        hexagon hex = new hexagon();
+        hex.numberofsides();
 
-        officier.display();
-        manager.display();
-
-    
     }
 }
